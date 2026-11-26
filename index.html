@@ -6,24 +6,16 @@
     <title>IE6 Modern Browser - Provided by Starsoft Tech</title>
     <style>
         /* ==========================================================================
-           WINDOWS XP LUNA & INTERNET EXPLORER 6 RETRO DESIGN SYSTEM
+           IE6 MODERN HYBRID DESIGN SYSTEM (Matches Build Screenshot)
            ========================================================================== */
         :root {
-            --xp-bg: #ECE9D8;
-            --xp-bg-dark: #D8D2BD;
-            --xp-border-light: #FFFFFF;
-            --xp-border-shadow: #ACA899;
-            --xp-border-dark: #716F64;
-            --xp-luna-blue-top: #0058EE;
-            --xp-luna-blue-mid: #3593FF;
-            --xp-luna-blue-bot: #0054E3;
-            --xp-luna-border: #001E72;
-            --xp-highlight: #316AC5;
-            --xp-green-btn: #3C9D2C;
-            --xp-text: #000000;
-            --xp-text-muted: #444444;
-            --font-ui: 'Tahoma', 'MS Sans Serif', 'Verdana', sans-serif;
-            --font-web: 'Verdana', 'Arial', sans-serif;
+            --ie6-chrome-bg: #ECE9D8;
+            --ie6-border-light: #FFFFFF;
+            --ie6-border-shadow: #ACA899;
+            --ie6-border-dark: #716F64;
+            --ie6-highlight: #316AC5;
+            --font-ui: 'Tahoma', 'Segoe UI', 'Verdana', sans-serif;
+            --font-web: 'Arial', 'Helvetica', sans-serif;
         }
 
         * {
@@ -35,140 +27,53 @@
         body {
             font-family: var(--font-ui);
             font-size: 12px;
-            color: var(--xp-text);
-            /* Classic Bliss-inspired sky & meadow gradient backdrop */
-            background: linear-gradient(180deg, #245EDC 0%, #5B97F2 42%, #85C1F5 62%, #529A2B 63%, #3A7A1B 100%);
+            color: #000000;
+            background: radial-gradient(circle at 20% 20%, #1d1438 0%, #0d101b 55%, #070910 100%);
             min-height: 100vh;
-            padding: 10px;
+            padding: 12px;
             display: flex;
             flex-direction: column;
             align-items: center;
             overflow-x: hidden;
-            user-select: none;
         }
 
-        /* Classic Bevel Borders */
-        .xp-bevel-out {
-            border-top: 1px solid var(--xp-border-light);
-            border-left: 1px solid var(--xp-border-light);
-            border-right: 1px solid var(--xp-border-dark);
-            border-bottom: 1px solid var(--xp-border-dark);
-            box-shadow: inset -1px -1px 0 var(--xp-border-shadow);
-        }
-
-        .xp-bevel-in {
-            border-top: 1px solid var(--xp-border-dark);
-            border-left: 1px solid var(--xp-border-dark);
-            border-right: 1px solid var(--xp-border-light);
-            border-bottom: 1px solid var(--xp-border-light);
-            box-shadow: inset 1px 1px 0 var(--xp-border-shadow);
-        }
-
-        .xp-btn {
-            background: linear-gradient(180deg, #FFFFFF 0%, #ECE9D8 85%, #D6D0C4 100%);
-            border: 1px solid #003C74;
-            border-radius: 3px;
-            padding: 3px 10px;
-            font-family: var(--font-ui);
-            font-size: 11px;
-            color: #000;
-            cursor: pointer;
-            box-shadow: inset 0 1px 0 #FFF, inset 0 -1px 2px rgba(0,0,0,0.12);
+        /* Classic IE6 Toolbar Buttons */
+        .ie6-flat-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 5px;
-            text-decoration: none;
-        }
-
-        .xp-btn:hover {
-            box-shadow: inset 0 0 0 1px #F8B330, inset 0 -2px 3px rgba(248, 179, 48, 0.4);
-        }
-
-        .xp-btn:active {
-            background: linear-gradient(180deg, #D6D0C4 0%, #ECE9D8 100%);
-            box-shadow: inset 1px 1px 2px rgba(0,0,0,0.25);
-        }
-
-        .xp-btn-primary {
-            border: 1px solid #003C74;
-            box-shadow: inset 0 0 0 1px #69A1E4, inset 0 -1px 2px rgba(0,0,0,0.15);
-            font-weight: bold;
-        }
-
-        /* ==========================================================================
-           TOP STARSOFT TECH QUICK BAR
-           ========================================================================== */
-        .starsoft-topbar {
-            width: 100%;
-            max-width: 1060px;
-            background: rgba(16, 24, 48, 0.88);
-            border: 1px solid #4A7AC9;
-            border-radius: 4px;
-            padding: 6px 12px;
-            margin-bottom: 10px;
-            color: #FFFFFF;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.35);
-        }
-
-        .starsoft-brand {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: bold;
-            font-size: 12px;
-            letter-spacing: 0.5px;
-        }
-
-        .starsoft-badge {
-            background: linear-gradient(135deg, #8b5cf6, #06b6d4);
-            color: #fff;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-size: 10px;
-            font-weight: bold;
-        }
-
-        .starsoft-links {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .starsoft-links a, .sound-toggle-btn {
-            color: #93C5FD;
-            text-decoration: none;
-            font-size: 11px;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.18);
-            padding: 3px 8px;
-            border-radius: 3px;
-            cursor: pointer;
+            height: 24px;
+            padding: 0 9px;
+            background: linear-gradient(180deg, #F6F5F0 0%, #E7E3D4 100%);
+            border: 1px solid #B5B1A3;
+            border-radius: 2px;
             font-family: var(--font-ui);
+            font-size: 11px;
+            color: #111111;
+            cursor: pointer;
+            text-decoration: none;
+            white-space: nowrap;
         }
 
-        .starsoft-links a:hover, .sound-toggle-btn:hover {
-            background: rgba(255,255,255,0.2);
-            color: #FFFFFF;
+        .ie6-flat-btn:hover {
+            background: linear-gradient(180deg, #FFFFFF 0%, #EFECE0 100%);
+            border-color: #7F9DB9;
+        }
+
+        .ie6-flat-btn:active {
+            background: #DDD8C6;
         }
 
         /* ==========================================================================
-           MAIN IE6 BROWSER WINDOW SHELL
+           MAIN IE6 MODERN BROWSER WINDOW SHELL
            ========================================================================== */
         .ie6-window {
             width: 100%;
-            max-width: 1060px;
-            background-color: var(--xp-bg);
-            border: 3px solid var(--xp-luna-blue-bot);
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55), inset 0 0 0 1px #559EFF;
+            max-width: 1120px;
+            background-color: var(--ie6-chrome-bg);
+            border: 1px solid #555555;
+            box-shadow: 0 18px 48px rgba(0, 0, 0, 0.75);
             display: flex;
             flex-direction: column;
             transition: all 0.2s ease;
@@ -176,40 +81,30 @@
 
         .ie6-window.maximized {
             max-width: 100%;
-            border-radius: 0;
         }
 
         .ie6-window.minimized .ie6-body-wrapper {
             display: none;
         }
 
-        /* Title Bar */
+        /* Clean White Modern-Hybrid Title Bar (Matching Screenshot) */
         .ie6-titlebar {
-            background: linear-gradient(180deg,
-                #0997FF 0%,
-                #0053EE 8%,
-                #0050EE 40%,
-                #06F 88%,
-                #06F 93%,
-                #005BFF 95%,
-                #003DD7 96%,
-                #003DD7 100%);
-            padding: 4px 6px;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
+            background-color: #FFFFFF;
+            height: 28px;
+            padding: 0 8px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            color: #FFFFFF;
-            text-shadow: 1px 1px 1px #001B6B;
-            font-weight: bold;
+            border-bottom: 1px solid #D8D4C8;
             font-size: 12px;
+            color: #111111;
+            user-select: none;
         }
 
         .ie6-title-left {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 7px;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -218,43 +113,43 @@
         .ie6-win-controls {
             display: flex;
             align-items: center;
-            gap: 2px;
+            gap: 8px;
             flex-shrink: 0;
         }
 
-        .win-ctrl-btn {
-            width: 21px;
-            height: 21px;
-            border: 1px solid #FFFFFF;
-            border-radius: 3px;
-            background: linear-gradient(180deg, #3D95FF 0%, #0054E3 85%, #003BB3 100%);
-            color: #FFFFFF;
-            font-weight: bold;
-            font-size: 11px;
-            display: flex;
+        /* Circular Green / Blue / Red Window Controls */
+        .win-circle-btn {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: none;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
+            font-size: 9px;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.9);
             cursor: pointer;
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+            transition: filter 0.15s;
         }
 
-        .win-ctrl-btn:hover {
-            filter: brightness(1.15);
+        .win-circle-btn:hover {
+            filter: brightness(1.12);
         }
 
-        .win-ctrl-close {
-            background: linear-gradient(180deg, #F48367 0%, #DC3C18 85%, #A62004 100%);
-        }
+        .btn-circle-min { background-color: #A3D977; }
+        .btn-circle-max { background-color: #89C4F4; }
+        .btn-circle-close { background-color: #F2784B; }
 
-        /* Menu Bar & Throbber Row */
+        /* Menu Bar + Black Rectangular Throbber Row */
         .ie6-menubar-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: var(--xp-bg);
-            border-bottom: 1px solid var(--xp-border-shadow);
-            padding-left: 2px;
+            background-color: var(--ie6-chrome-bg);
+            padding: 2px 4px 2px 2px;
             position: relative;
+            user-select: none;
         }
 
         .ie6-menubar {
@@ -266,14 +161,14 @@
 
         .ie6-menu-item {
             position: relative;
-            padding: 3px 8px;
+            padding: 3px 9px;
             cursor: pointer;
             font-size: 11px;
-            color: #000;
+            color: #111111;
         }
 
         .ie6-menu-item:hover, .ie6-menu-item.active {
-            background-color: var(--xp-highlight);
+            background-color: var(--ie6-highlight);
             color: #FFFFFF;
         }
 
@@ -282,13 +177,13 @@
             position: absolute;
             top: 100%;
             left: 0;
-            min-width: 190px;
+            min-width: 210px;
             background-color: #FFFFFF;
-            border: 1px solid var(--xp-border-dark);
-            box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            border: 1px solid var(--ie6-border-dark);
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.28);
             z-index: 100;
             padding: 2px;
-            color: #000;
+            color: #000000;
         }
 
         .ie6-menu-item.active .ie6-dropdown {
@@ -296,16 +191,18 @@
         }
 
         .ie6-dropdown-item {
-            padding: 4px 18px 4px 22px;
+            padding: 4px 16px 4px 20px;
             font-size: 11px;
             display: flex;
             justify-content: space-between;
             cursor: pointer;
             white-space: nowrap;
+            text-decoration: none;
+            color: inherit;
         }
 
         .ie6-dropdown-item:hover {
-            background-color: var(--xp-highlight);
+            background-color: var(--ie6-highlight);
             color: #FFFFFF;
         }
 
@@ -315,110 +212,64 @@
             margin: 3px 2px;
         }
 
-        /* Classic Animated IE6 Throbber Box */
-        .ie6-throbber {
-            width: 38px;
-            height: 24px;
-            background: #FFFFFF;
-            border-left: 1px solid var(--xp-border-shadow);
+        /* Black Rectangular Throbber with Blue 'e' (Matching Screenshot) */
+        .ie6-black-throbber {
+            width: 42px;
+            height: 20px;
+            background-color: #000000;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
+            border: 1px solid #333333;
         }
 
-        .throbber-e {
-            font-family: 'Times New Roman', serif;
+        .throbber-e-blue {
+            font-family: 'Arial Black', 'Impact', sans-serif;
             font-weight: 900;
-            font-style: italic;
-            font-size: 18px;
-            color: #0054E3;
-            text-shadow: 0 0 2px #69B4FF;
+            font-size: 14px;
+            color: #1E90FF;
+            line-height: 1;
             display: inline-block;
         }
 
-        .throbber-e.spinning {
-            animation: ie6Spin 0.65s linear infinite;
+        .throbber-e-blue.spinning {
+            animation: throbberPulse 0.6s linear infinite;
         }
 
-        @keyframes ie6Spin {
-            0% { transform: rotateY(0deg) scale(1); color: #0054E3; }
-            50% { transform: rotateY(180deg) scale(1.15); color: #F59E0B; }
-            100% { transform: rotateY(360deg) scale(1); color: #0054E3; }
+        @keyframes throbberPulse {
+            0% { transform: rotateY(0deg); color: #1E90FF; }
+            50% { transform: rotateY(180deg); color: #63B3ED; }
+            100% { transform: rotateY(360deg); color: #1E90FF; }
         }
 
-        /* Standard Buttons Toolbar */
+        /* Streamlined Toolbar Row (◀ Back, ▶, ✕ Stop, ↻, ⌂ Home) */
         .ie6-toolbar {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 2px;
-            padding: 3px 6px;
-            background-color: var(--xp-bg);
-            border-top: 1px solid var(--xp-border-light);
-            border-bottom: 1px solid var(--xp-border-shadow);
-        }
-
-        .toolbar-handle {
-            width: 3px;
-            height: 22px;
-            border-left: 1px solid var(--xp-border-light);
-            border-right: 1px solid var(--xp-border-shadow);
-            margin-right: 3px;
-        }
-
-        .tb-btn {
-            display: inline-flex;
-            align-items: center;
             gap: 4px;
-            padding: 3px 6px;
-            border: 1px solid transparent;
-            border-radius: 3px;
-            background: transparent;
-            font-family: var(--font-ui);
-            font-size: 11px;
-            color: #000;
-            cursor: pointer;
+            padding: 3px 6px 5px 6px;
+            background-color: var(--ie6-chrome-bg);
+            border-bottom: 1px solid #D5D0C0;
+            user-select: none;
         }
 
-        .tb-btn:hover {
-            border-top: 1px solid #FFFFFF;
-            border-left: 1px solid #FFFFFF;
-            border-right: 1px solid #ACA899;
-            border-bottom: 1px solid #ACA899;
-            background-color: #F4F2E8;
-        }
-
-        .tb-btn:active {
-            border-top: 1px solid #ACA899;
-            border-left: 1px solid #ACA899;
-            border-right: 1px solid #FFFFFF;
-            border-bottom: 1px solid #FFFFFF;
-        }
-
-        .tb-sep {
-            width: 1px;
-            height: 22px;
-            background-color: var(--xp-border-shadow);
-            border-right: 1px solid var(--xp-border-light);
-            margin: 0 3px;
-        }
-
-        /* Address Bar */
+        /* Address Bar Row */
         .ie6-addressbar {
             display: flex;
             align-items: center;
             gap: 6px;
-            padding: 3px 6px;
-            background-color: var(--xp-bg);
-            border-top: 1px solid var(--xp-border-light);
-            border-bottom: 1px solid var(--xp-border-shadow);
+            padding: 4px 6px;
+            background-color: var(--ie6-chrome-bg);
+            border-bottom: 1px solid #ACA899;
         }
 
         .address-label {
-            color: #444;
+            color: #222222;
             font-size: 11px;
             white-space: nowrap;
+            user-select: none;
         }
 
         .address-input-wrap {
@@ -427,9 +278,9 @@
             align-items: center;
             background: #FFFFFF;
             border: 1px solid #7F9DB9;
+            border-bottom: 2px solid #2B7CD3;
             height: 22px;
-            padding: 0 4px;
-            gap: 5px;
+            padding: 0 6px;
         }
 
         .address-input {
@@ -438,760 +289,631 @@
             outline: none;
             font-family: var(--font-ui);
             font-size: 11px;
-            color: #000;
+            color: #000000;
             width: 100%;
         }
 
-        .ie6-go-btn {
-            display: inline-flex;
+        /* Classic Non-Blocking IE6 Gold Information Bar (Triggered on Download) */
+        .ie6-infobar {
+            display: none;
             align-items: center;
-            gap: 4px;
-            height: 22px;
-            padding: 0 8px;
-            background: linear-gradient(180deg, #F6F5EE 0%, #E2DFD0 100%);
-            border: 1px solid #7F9DB9;
-            border-radius: 2px;
-            font-family: var(--font-ui);
+            justify-content: space-between;
+            gap: 10px;
+            background-color: #FFFFE1;
+            border-bottom: 1px solid #ACA899;
+            padding: 5px 10px;
             font-size: 11px;
-            cursor: pointer;
+            color: #000000;
         }
 
-        .ie6-go-btn:hover {
-            border-color: #316AC5;
-            background: #FFFFFF;
-        }
-
-        .go-arrow {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 14px;
-            height: 14px;
-            background: linear-gradient(180deg, #65D448 0%, #2B8C17 100%);
-            color: #FFF;
-            border-radius: 2px;
-            font-size: 9px;
-            font-weight: bold;
-        }
-
-        /* Links Quick Bar */
-        .ie6-linksbar {
+        .ie6-infobar.visible {
             display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 4px;
-            padding: 2px 6px;
-            background-color: var(--xp-bg);
-            border-top: 1px solid var(--xp-border-light);
-            border-bottom: 1px solid var(--xp-border-dark);
-            font-size: 11px;
-        }
-
-        .links-label {
-            color: #444;
-            margin-right: 4px;
-        }
-
-        .quick-link-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 2px 6px;
-            border: 1px solid transparent;
-            background: transparent;
-            font-family: var(--font-ui);
-            font-size: 11px;
-            color: #000;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .quick-link-btn:hover {
-            border: 1px solid var(--xp-border-shadow);
-            background-color: #F5F4EA;
         }
 
         /* ==========================================================================
-           BROWSER VIEWPORT CONTENT AREA
+           BROWSER VIEWPORT (Dark-Mode Google Homepage + Simulated Modern Sites)
            ========================================================================== */
         .ie6-viewport {
-            background-color: #FFFFFF;
-            border-top: 2px solid #808080;
-            border-left: 2px solid #808080;
-            border-right: 1px solid #FFFFFF;
-            border-bottom: 1px solid #FFFFFF;
-            min-height: 540px;
-            overflow-y: auto;
+            background-color: #202124;
+            color: #E8EAED;
+            min-height: 460px;
+            display: flex;
+            flex-direction: column;
             font-family: var(--font-web);
-            user-select: text;
         }
 
-        /* Simulated Web Page Header Banner */
-        .web-hero-banner {
-            background: linear-gradient(135deg, #003399 0%, #0066CC 55%, #3399FF 100%);
-            color: #FFFFFF;
-            padding: 24px 20px;
-            border-bottom: 4px solid #FF9900;
+        /* Dark-Mode Google Homepage Canvas (Matching Screenshot) */
+        .google-dark-canvas {
+            flex: 1;
             display: flex;
-            flex-wrap: wrap;
-            align-items: center;
+            flex-direction: column;
             justify-content: space-between;
-            gap: 20px;
+            background-color: #202124;
+            color: #E8EAED;
+            min-height: 460px;
         }
 
-        .web-hero-left {
-            flex: 1 1 460px;
-        }
-
-        .version-pill {
-            display: inline-block;
-            background-color: #FFCC00;
-            color: #002266;
-            font-weight: bold;
-            font-size: 10px;
-            padding: 2px 7px;
-            border: 1px solid #996600;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-        }
-
-        .web-hero-title {
-            font-family: 'Trebuchet MS', 'Tahoma', sans-serif;
-            font-size: 28px;
-            font-weight: bold;
-            line-height: 1.15;
-            margin-bottom: 8px;
-            text-shadow: 1px 2px 2px rgba(0,0,0,0.45);
-        }
-
-        .web-hero-sub {
-            font-size: 13px;
-            line-height: 1.5;
-            color: #E6F2FF;
-            margin-bottom: 14px;
-            max-width: 580px;
-        }
-
-        /* Prominent XP Download Card */
-        .download-box-card {
-            flex: 0 1 320px;
-            background-color: #ECE9D8;
-            color: #000000;
-            border: 2px solid #003C74;
-            border-radius: 6px;
-            padding: 14px;
-            box-shadow: 4px 4px 0 rgba(0, 20, 60, 0.35);
-        }
-
-        .download-box-header {
+        .google-top-nav {
             display: flex;
             align-items: center;
-            gap: 10px;
-            border-bottom: 1px solid #ACA899;
-            padding-bottom: 10px;
-            margin-bottom: 10px;
-        }
-
-        .download-cta-btn {
-            width: 100%;
-            padding: 10px 14px;
-            background: linear-gradient(180deg, #74E356 0%, #3BA821 50%, #2D8A16 100%);
-            border: 1px solid #1B5E0B;
-            border-radius: 4px;
-            color: #FFFFFF;
-            font-family: var(--font-ui);
-            font-size: 13px;
-            font-weight: bold;
-            text-shadow: 1px 1px 1px #144A07;
-            cursor: pointer;
-            box-shadow: inset 0 1px 0 #B8FF9E, 0 2px 4px rgba(0,0,0,0.25);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 8px;
-        }
-
-        .download-cta-btn:hover {
-            filter: brightness(1.06);
-        }
-
-        .download-cta-btn:active {
-            transform: translateY(1px);
-        }
-
-        .download-meta {
-            font-size: 10px;
-            color: #444;
-            text-align: center;
-            line-height: 1.4;
-        }
-
-        /* Main Content Grid inside Viewport */
-        .web-content-body {
-            padding: 20px;
-            background-color: #F7F9FC;
-        }
-
-        .section-heading-xp {
-            background: linear-gradient(90deg, #D6E4F7 0%, #F7F9FC 100%);
-            border-left: 4px solid #0054E3;
-            padding: 6px 10px;
-            font-size: 14px;
-            font-weight: bold;
-            color: #003399;
-            margin-bottom: 14px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 14px;
-            margin-bottom: 24px;
-        }
-
-        .feature-card-2004 {
-            background-color: #FFFFFF;
-            border: 1px solid #B5C7DE;
-            padding: 12px;
-            box-shadow: 2px 2px 0 #E1E8F2;
-        }
-
-        .feature-card-header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #003399;
-            font-size: 12px;
-        }
-
-        .feature-card-body {
-            font-size: 11px;
-            color: #333333;
-            line-height: 1.5;
-        }
-
-        /* Specs & Comparison Table */
-        .two-col-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            justify-content: flex-end;
             gap: 16px;
-            margin-bottom: 20px;
+            padding: 14px 20px;
+            font-size: 13px;
         }
 
-        .xp-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: #FFFFFF;
-            font-size: 11px;
-            border: 1px solid #8FA8C8;
+        .google-top-nav a {
+            color: #E8EAED;
+            text-decoration: none;
+            cursor: pointer;
         }
 
-        .xp-table th {
-            background: linear-gradient(180deg, #E8F0FA 0%, #C8DBF2 100%);
-            color: #002B73;
-            text-align: left;
-            padding: 6px 8px;
-            border-bottom: 1px solid #8FA8C8;
-        }
-
-        .xp-table td {
-            padding: 6px 8px;
-            border-bottom: 1px solid #E2E8F0;
-            color: #222;
-        }
-
-        .xp-table tr:nth-child(even) td {
-            background-color: #F8FAFC;
-        }
-
-        /* Simulated Modern Sites Directory inside IE6 */
-        .sim-sites-box {
-            background-color: #ECE9D8;
-            border: 1px solid #ACA899;
-            padding: 12px;
-            margin-bottom: 16px;
-        }
-
-        .sim-site-chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 8px;
-        }
-
-        /* Simulated Page View Banner when navigating away from Home */
-        .sim-page-notice {
-            background-color: #FFFFE1;
-            border-bottom: 1px solid #ACA899;
-            padding: 6px 12px;
-            font-size: 11px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 8px;
-        }
-
-        .sim-page-canvas {
-            padding: 24px;
-            background: #FFFFFF;
-            min-height: 440px;
-        }
-
-        /* Viewport Footer */
-        .web-footer {
-            background-color: #E4E9F2;
-            border-top: 1px solid #B5C7DE;
-            padding: 12px 20px;
-            font-size: 11px;
-            color: #444;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-        }
-
-        .web-footer a {
-            color: #003399;
+        .google-top-nav a:hover {
             text-decoration: underline;
         }
 
+        .google-signin-pill {
+            background-color: #C2E7FF;
+            color: #001D35 !important;
+            padding: 7px 18px;
+            border-radius: 999px;
+            font-weight: 500;
+            font-size: 13px;
+        }
+
+        .google-center-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 16px 40px 16px;
+        }
+
+        .google-wordmark {
+            font-family: 'Product Sans', 'Arial', sans-serif;
+            font-size: 74px;
+            font-weight: 500;
+            letter-spacing: -2px;
+            color: #FFFFFF;
+            margin-bottom: 24px;
+            user-select: none;
+        }
+
+        .google-search-pill {
+            width: 100%;
+            max-width: 584px;
+            height: 46px;
+            background-color: #303134;
+            border: 1px solid #5F6368;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            padding: 0 14px;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .google-search-pill:hover, .google-search-pill:focus-within {
+            background-color: #303134;
+            border-color: #8AB4F8;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.45);
+        }
+
+        .google-search-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #E8EAED;
+            font-size: 15px;
+        }
+
+        .google-aimode-chip {
+            background-color: #3C4043;
+            color: #E8EAED;
+            border: 1px solid #5F6368;
+            border-radius: 999px;
+            padding: 4px 12px;
+            font-size: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .google-buttons-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .google-action-btn {
+            background-color: #303134;
+            border: 1px solid #303134;
+            border-radius: 4px;
+            color: #E8EAED;
+            font-size: 13px;
+            padding: 9px 16px;
+            cursor: pointer;
+        }
+
+        .google-action-btn:hover {
+            border-color: #5F6368;
+        }
+
+        .google-lang-row {
+            font-size: 12px;
+            color: #BDC1C6;
+        }
+
+        .google-lang-row a {
+            color: #8AB4F8;
+            text-decoration: none;
+            margin-left: 4px;
+        }
+
+        .google-footer-wrap {
+            background-color: #171717;
+            font-size: 13px;
+            color: #9AA0A6;
+        }
+
+        .google-footer-country {
+            padding: 12px 24px;
+            border-bottom: 1px solid #3C4043;
+        }
+
+        .google-footer-links {
+            padding: 12px 24px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 14px;
+        }
+
+        .google-footer-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        .google-footer-group a {
+            color: #9AA0A6;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .google-footer-group a:hover {
+            text-decoration: underline;
+        }
+
+        /* Simulated Modern Web Page View when user navigates */
+        .sim-modern-page {
+            padding: 28px 24px;
+            background-color: #18191C;
+            color: #F3F4F6;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
         /* ==========================================================================
-           IE6 BOTTOM STATUS BAR
+           CLASSIC IE6 BOTTOM STATUS BAR (Matching Screenshot)
            ========================================================================== */
         .ie6-statusbar {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: var(--xp-bg);
-            border-top: 1px solid var(--xp-border-shadow);
+            background-color: var(--ie6-chrome-bg);
+            border-top: 1px solid #ACA899;
             padding: 2px 6px;
             font-size: 11px;
-            color: #000;
-            gap: 8px;
+            color: #111111;
+            user-select: none;
         }
 
-        .status-left {
-            display: flex;
+        .status-zone-box {
+            display: inline-flex;
             align-items: center;
-            gap: 6px;
-            flex: 1;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-
-        .status-progress-wrap {
-            width: 110px;
-            height: 13px;
-            background: #FFFFFF;
-            border: 1px solid var(--xp-border-dark);
-            padding: 1px;
-            display: none;
-        }
-
-        .status-progress-wrap.active {
-            display: block;
-        }
-
-        .status-progress-fill {
-            height: 100%;
-            width: 0%;
-            background: repeating-linear-gradient(
-                90deg,
-                #2979FF 0px,
-                #2979FF 6px,
-                #FFFFFF 6px,
-                #FFFFFF 8px
-            );
-            transition: width 0.2s linear;
-        }
-
-        .status-right {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            border-left: 1px solid var(--xp-border-shadow);
+            gap: 5px;
+            border-left: 1px solid #ACA899;
             padding-left: 8px;
-            white-space: nowrap;
+            min-width: 110px;
         }
 
         /* ==========================================================================
-           CLASSIC WINDOWS XP / IE6 SECURITY DOWNLOAD DIALOG MODAL
+           STARSOFT TECH PROMOTIONAL SHOWCASE & DIRECT DOWNLOAD SECTION BELOW
            ========================================================================== */
-        .xp-modal-backdrop {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.45);
-            z-index: 999;
-            align-items: center;
-            justify-content: center;
-            padding: 12px;
-        }
-
-        .xp-modal-backdrop.open {
-            display: flex;
-        }
-
-        .xp-dialog {
+        .starsoft-showcase {
             width: 100%;
-            max-width: 420px;
-            background-color: var(--xp-bg);
-            border: 3px solid var(--xp-luna-blue-bot);
-            border-top-left-radius: 7px;
-            border-top-right-radius: 7px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.65);
-            overflow: hidden;
+            max-width: 1120px;
+            margin-top: 18px;
+            background-color: var(--ie6-chrome-bg);
+            border: 1px solid #555555;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.65);
         }
 
-        .xp-dialog-body {
-            padding: 16px;
-            font-size: 11px;
-            line-height: 1.5;
-        }
-
-        .xp-dialog-row {
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-            margin-bottom: 14px;
-        }
-
-        .xp-dialog-actions {
-            display: flex;
-            justify-content: flex-end;
-            gap: 8px;
-            margin-top: 14px;
-        }
-
-        .flying-file-stage {
-            height: 44px;
-            background: #FFFFFF;
-            border: 1px solid var(--xp-border-dark);
-            margin-bottom: 10px;
+        .showcase-titlebar {
+            background: linear-gradient(90deg, #0A246A 0%, #A6CAF0 100%);
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 5px 10px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 18px;
-            position: relative;
-            overflow: hidden;
         }
 
-        .flying-doc {
-            position: absolute;
-            left: 42px;
-            font-size: 16px;
-            animation: flyAcross 1.2s infinite ease-in-out;
+        .showcase-hero {
+            background: linear-gradient(135deg, #101626 0%, #1B2540 100%);
+            color: #FFFFFF;
+            padding: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            border-bottom: 2px solid #ACA899;
         }
 
-        @keyframes flyAcross {
-            0% { left: 45px; top: 14px; opacity: 1; }
-            50% { top: 4px; }
-            100% { left: calc(100% - 62px); top: 14px; opacity: 0.9; }
+        .showcase-hero-text {
+            flex: 1 1 520px;
         }
 
-        /* Responsive Tweaks */
+        .showcase-badge {
+            display: inline-block;
+            background-color: #2B7CD3;
+            color: #FFFFFF;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 2px;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .showcase-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #FFFFFF;
+        }
+
+        .showcase-desc {
+            font-size: 13px;
+            line-height: 1.55;
+            color: #CBD5E1;
+            margin-bottom: 14px;
+        }
+
+        /* Direct Download Card */
+        .direct-dl-card {
+            flex: 0 1 340px;
+            background-color: var(--ie6-chrome-bg);
+            color: #000000;
+            border: 2px solid #FFFFFF;
+            border-right-color: #716F64;
+            border-bottom-color: #716F64;
+            padding: 16px;
+        }
+
+        .direct-dl-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 11px 16px;
+            background: linear-gradient(180deg, #6BD94E 0%, #379E1E 55%, #287D13 100%);
+            border: 1px solid #18520A;
+            border-radius: 3px;
+            color: #FFFFFF;
+            font-family: var(--font-ui);
+            font-size: 13px;
+            font-weight: bold;
+            text-decoration: none;
+            text-shadow: 1px 1px 1px #124006;
+            box-shadow: inset 0 1px 0 #B5FF9E, 0 2px 4px rgba(0,0,0,0.25);
+            cursor: pointer;
+            margin-bottom: 8px;
+        }
+
+        .direct-dl-btn:hover {
+            filter: brightness(1.06);
+        }
+
+        .direct-dl-btn:active {
+            transform: translateY(1px);
+        }
+
+        .showcase-grid {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+        }
+
+        .retro-panel {
+            background-color: #FFFFFF;
+            border: 1px solid #ACA899;
+            padding: 14px;
+        }
+
+        .retro-panel h3 {
+            font-size: 13px;
+            color: #0A246A;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .retro-panel p {
+            font-size: 11px;
+            color: #333333;
+            line-height: 1.5;
+        }
+
+        .showcase-footer {
+            background-color: #DFDCD0;
+            border-top: 1px solid #ACA899;
+            padding: 10px 20px;
+            font-size: 11px;
+            color: #333333;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .showcase-footer a {
+            color: #0A246A;
+            text-decoration: underline;
+        }
+
         @media (max-width: 640px) {
-            .tb-label { display: none; }
-            .status-right { display: none; }
-            .web-hero-title { font-size: 22px; }
+            .google-wordmark { font-size: 52px; }
+            .btn-text-hide { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- TOP STARSOFT TECH NAVIGATION BAR -->
-    <div class="starsoft-topbar">
-        <div class="starsoft-brand">
-            <span class="starsoft-badge">STARSOFT TECH</span>
-            <span>IE6 Modern Browser — Official Release Page</span>
-        </div>
-        <div class="starsoft-links">
-            <button id="soundToggleBtn" class="sound-toggle-btn" title="Toggle classic 2004 Windows XP click sounds">
-                🔊 XP Click Sounds: ON
-            </button>
-            <a href="http://hello-azalia.github.io/startimer" target="_blank">StarTimer</a>
-            <a href="http://hello-azalia.github.io/boxstrap" target="_blank">Boxstrap</a>
-            <a href="https://www.facebook.com/starsoft.ph" target="_blank">Starsoft PH FB</a>
-        </div>
-    </div>
-
-    <!-- MAIN IE6 BROWSER WINDOW FRAME -->
+    <!-- ==========================================================================
+         INTERACTIVE IE6 MODERN BROWSER WINDOW (Exact Build Aesthetic)
+         ========================================================================== -->
     <div id="ie6Window" class="ie6-window">
         
-        <!-- Title Bar -->
+        <!-- Clean White Title Bar -->
         <div class="ie6-titlebar">
             <div class="ie6-title-left">
-                <!-- Classic Blue 'e' Icon SVG -->
+                <!-- Classic Blue 'e' with Gold Orbit Icon -->
                 <svg width="16" height="16" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="9" fill="#1E88E5" stroke="#FFFFFF" stroke-width="1.2"/>
-                    <ellipse cx="12" cy="12" rx="11" ry="4.2" fill="none" stroke="#FFD54F" stroke-width="2" transform="rotate(-28 12 12)"/>
-                    <text x="7.5" y="16.5" fill="#FFFFFF" font-family="Times New Roman, serif" font-weight="bold" font-style="italic" font-size="16">e</text>
+                    <circle cx="12" cy="12" r="9" fill="#1E88E5"/>
+                    <ellipse cx="12" cy="12" rx="11" ry="4" fill="none" stroke="#F59E0B" stroke-width="2" transform="rotate(-25 12 12)"/>
+                    <text x="7.5" y="16.5" fill="#FFFFFF" font-family="Arial Black, sans-serif" font-weight="900" font-size="14">e</text>
                 </svg>
-                <span id="windowTitleText">IE6 Modern Browser - Microsoft Internet Explorer provided by Starsoft Tech</span>
+                <span id="windowTitleText">Google - Microsoft Internet Explorer</span>
             </div>
             <div class="ie6-win-controls">
-                <button class="win-ctrl-btn" id="btnMinimize" title="Minimize">_</button>
-                <button class="win-ctrl-btn" id="btnMaximize" title="Maximize / Restore">□</button>
-                <button class="win-ctrl-btn win-ctrl-close" id="btnClose" title="Close">×</button>
+                <button class="win-circle-btn btn-circle-min" id="btnMinimize" title="Minimize">–</button>
+                <button class="win-circle-btn btn-circle-max" id="btnMaximize" title="Maximize">+</button>
+                <button class="win-circle-btn btn-circle-close" id="btnClose" title="Close">×</button>
             </div>
         </div>
 
-        <!-- Collapsible Window Body -->
         <div class="ie6-body-wrapper">
-
-            <!-- Classic Menu Bar + Throbber -->
+            <!-- Classic Menu Bar + Black Rectangular Throbber -->
             <div class="ie6-menubar-row">
                 <ul class="ie6-menubar" id="ie6MenuBar">
-                    <li class="ie6-menu-item" data-menu="file">
-                        <u>F</u>ile
+                    <li class="ie6-menu-item">
+                        File
                         <div class="ie6-dropdown">
-                            <div class="ie6-dropdown-item" onclick="navigateTo('about:home')"><span>New Window</span><span>Ctrl+N</span></div>
-                            <div class="ie6-dropdown-item" onclick="triggerDownloadDialog()"><span>Download Setup.exe...</span><span>Ctrl+S</span></div>
+                            <div class="ie6-dropdown-item" onclick="navigateTo('https://www.google.com/')"><span>New Window</span><span>Ctrl+N</span></div>
+                            <a class="ie6-dropdown-item" href="./IE6ModernBrowser-Setup.exe" download="IE6ModernBrowser-Setup.exe" onclick="onDirectDownloadStart()">
+                                <span>Download Setup.exe</span><span>Ctrl+S</span>
+                            </a>
                             <div class="ie6-dropdown-sep"></div>
                             <div class="ie6-dropdown-item" onclick="window.print()"><span>Print...</span><span>Ctrl+P</span></div>
-                            <div class="ie6-dropdown-sep"></div>
-                            <div class="ie6-dropdown-item" onclick="showInfoModal('Close Browser', 'Thanks for testing IE6 Modern Browser by Starsoft Tech!')"><span>Close</span></div>
                         </div>
                     </li>
-                    <li class="ie6-menu-item" data-menu="edit">
-                        <u>E</u>dit
+                    <li class="ie6-menu-item">
+                        Edit
                         <div class="ie6-dropdown">
-                            <div class="ie6-dropdown-item" onclick="copyCurrentUrl()"><span>Copy Page URL</span><span>Ctrl+C</span></div>
-                            <div class="ie6-dropdown-item" onclick="navigateTo('about:home')"><span>Select All</span><span>Ctrl+A</span></div>
+                            <div class="ie6-dropdown-item" onclick="copyCurrentUrl()"><span>Copy Address URL</span><span>Ctrl+C</span></div>
                         </div>
                     </li>
-                    <li class="ie6-menu-item" data-menu="view">
-                        <u>V</u>iew
+                    <li class="ie6-menu-item">
+                        View
                         <div class="ie6-dropdown">
                             <div class="ie6-dropdown-item" onclick="toggleMaximize()"><span>Full Screen Toggle</span><span>F11</span></div>
                             <div class="ie6-dropdown-item" onclick="refreshCurrentPage()"><span>Refresh</span><span>F5</span></div>
-                            <div class="ie6-dropdown-sep"></div>
-                            <div class="ie6-dropdown-item" onclick="showInfoModal('View Source', 'Engine: Modern Chromium/WebView2 Core wrapped in authentic 2004 IE6 Luna Chrome by Starsoft Tech.')"><span>Source</span></div>
                         </div>
                     </li>
-                    <li class="ie6-menu-item" data-menu="favorites">
-                        F<u>a</u>vorites
+                    <li class="ie6-menu-item">
+                        Favorites
                         <div class="ie6-dropdown">
-                            <div class="ie6-dropdown-item" onclick="navigateTo('http://www.starsoft.ph/ie6modern')"><span>★ IE6 Modern Home</span></div>
-                            <div class="ie6-dropdown-item" onclick="navigateTo('https://www.youtube.com')"><span>▶ YouTube (2026 Ready)</span></div>
-                            <div class="ie6-dropdown-item" onclick="navigateTo('https://discord.com')"><span>💬 Discord Web</span></div>
-                            <div class="ie6-dropdown-item" onclick="navigateTo('https://github.com')"><span>🐙 GitHub</span></div>
+                            <div class="ie6-dropdown-item" onclick="navigateTo('https://www.google.com/')"><span>Google Search</span></div>
+                            <div class="ie6-dropdown-item" onclick="navigateTo('https://www.youtube.com/')"><span>YouTube (HTML5)</span></div>
+                            <div class="ie6-dropdown-item" onclick="navigateTo('https://discord.com/')"><span>Discord Web</span></div>
                             <div class="ie6-dropdown-sep"></div>
-                            <div class="ie6-dropdown-item" onclick="window.open('http://hello-azalia.github.io/startimer', '_blank')"><span>⏱ StarTimer Cafe Billing</span></div>
-                            <div class="ie6-dropdown-item" onclick="window.open('http://hello-azalia.github.io/boxstrap', '_blank')"><span>📦 Boxstrap Installer</span></div>
+                            <a class="ie6-dropdown-item" href="http://hello-azalia.github.io/startimer" target="_blank"><span>StarTimer Cafe Billing</span></a>
+                            <a class="ie6-dropdown-item" href="http://hello-azalia.github.io/boxstrap" target="_blank"><span>Boxstrap Roblox Installer</span></a>
                         </div>
                     </li>
-                    <li class="ie6-menu-item" data-menu="tools">
-                        <u>T</u>ools
+                    <li class="ie6-menu-item">
+                        Tools
                         <div class="ie6-dropdown">
-                            <div class="ie6-dropdown-item" onclick="showInfoModal('Internet Options', 'TLS 1.3: Enabled\nHTML5 & CSS3: Enabled\nPop-up Blocker: Active\n2004 Nostalgia Skin: Locked On')"><span>Internet Options...</span></div>
                             <div class="ie6-dropdown-item" onclick="toggleSound()"><span>Toggle XP Click Sound</span></div>
+                            <a class="ie6-dropdown-item" href="./IE6ModernBrowser-Setup.exe" download="IE6ModernBrowser-Setup.exe" onclick="onDirectDownloadStart()">
+                                <span>Get IE6ModernBrowser-Setup.exe</span>
+                            </a>
                         </div>
                     </li>
-                    <li class="ie6-menu-item" data-menu="help">
-                        <u>H</u>elp
+                    <li class="ie6-menu-item">
+                        Help
                         <div class="ie6-dropdown">
-                            <div class="ie6-dropdown-item" onclick="showInfoModal('About IE6 Modern Browser', 'IE6 Modern Browser v6.0.2026\nDeveloped by Starsoft Tech PH.\n\nExperience the iconic 2004 Windows XP Internet Explorer 6 look while browsing modern websites smoothly!')"><span>About Internet Explorer</span></div>
+                            <a class="ie6-dropdown-item" href="https://www.facebook.com/starsoft.ph" target="_blank"><span>Starsoft Tech Official Page</span></a>
+                            <a class="ie6-dropdown-item" href="./IE6ModernBrowser-Setup.exe" download="IE6ModernBrowser-Setup.exe" onclick="onDirectDownloadStart()">
+                                <span>Download Installer (.exe)</span>
+                            </a>
                         </div>
                     </li>
                 </ul>
 
-                <!-- Animated IE6 Throbber -->
-                <div class="ie6-throbber" title="IE6 Modern Browser Activity Indicator">
-                    <span id="throbberIcon" class="throbber-e">e</span>
+                <!-- Black Rectangular Throbber with Blue 'e' -->
+                <div class="ie6-black-throbber" title="IE6 Modern Browser">
+                    <span id="throbberIcon" class="throbber-e-blue">e</span>
                 </div>
             </div>
 
-            <!-- Standard Buttons Toolbar -->
+            <!-- Streamlined Toolbar (◀ Back, ▶, ✕ Stop, ↻, ⌂ Home + Direct Download) -->
             <div class="ie6-toolbar">
-                <div class="toolbar-handle"></div>
-                <button class="tb-btn" id="btnBack" title="Back">
-                    <svg width="16" height="16" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#3BA821"/><path d="M14 7l-5 5 5 5V7z" fill="#FFF"/></svg>
-                    <span class="tb-label">Back</span>
+                <button class="ie6-flat-btn" id="btnBack" title="Back">
+                    <span>◀</span><span>Back</span>
                 </button>
-                <button class="tb-btn" id="btnForward" title="Forward">
-                    <svg width="16" height="16" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#3BA821"/><path d="M10 7l5 5-5 5V7z" fill="#FFF"/></svg>
+                <button class="ie6-flat-btn" id="btnForward" title="Forward">
+                    <span>▶</span>
                 </button>
-                <button class="tb-btn" id="btnStop" title="Stop">
-                    <svg width="16" height="16" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" fill="#D9381E"/><path d="M8 8l8 8M16 8l-8 8" stroke="#FFF" stroke-width="2.2"/></svg>
+                <button class="ie6-flat-btn" id="btnStop" title="Stop">
+                    <span>✕</span><span>Stop</span>
                 </button>
-                <button class="tb-btn" id="btnRefresh" title="Refresh">
-                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M17.65 6.35A7.958 7.958 0 0012 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" fill="#2E7D32"/></svg>
+                <button class="ie6-flat-btn" id="btnRefresh" title="Refresh">
+                    <span>↻</span>
                 </button>
-                <button class="tb-btn" id="btnHome" title="Home">
-                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" fill="#1976D2"/></svg>
-                    <span class="tb-label">Home</span>
+                <button class="ie6-flat-btn" id="btnHome" title="Home">
+                    <span>⌂</span><span>Home</span>
                 </button>
-                <div class="tb-sep"></div>
-                <button class="tb-btn" onclick="navigateTo('https://www.google.com')" title="Search">
-                    <svg width="16" height="16" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="#1565C0" stroke-width="2.2"/><path d="M15.5 15.5L21 21" stroke="#E65100" stroke-width="2.5"/></svg>
-                    <span class="tb-label">Search</span>
-                </button>
-                <button class="tb-btn" onclick="navigateTo('https://www.youtube.com')" title="Favorites">
-                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#FBC02D" stroke="#B78103" stroke-width="1"/></svg>
-                    <span class="tb-label">Favorites</span>
-                </button>
-                <div class="tb-sep"></div>
-                <button class="tb-btn" onclick="triggerDownloadDialog()" title="Download Installer">
-                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" fill="#2E7D32"/></svg>
-                    <span class="tb-label"><strong>Get Setup.exe</strong></span>
-                </button>
+                <a class="ie6-flat-btn" href="./IE6ModernBrowser-Setup.exe" download="IE6ModernBrowser-Setup.exe" onclick="onDirectDownloadStart()" style="margin-left:auto; font-weight:bold;">
+                    <span>⬇</span><span class="btn-text-hide">Download IE6ModernBrowser-Setup.exe</span>
+                </a>
             </div>
 
-            <!-- Address Bar -->
+            <!-- Address Bar Row -->
             <form id="addressForm" class="ie6-addressbar">
-                <div class="toolbar-handle"></div>
-                <span class="address-label">A<u>d</u>dress</span>
+                <span class="address-label">Address</span>
                 <div class="address-input-wrap">
-                    <svg width="14" height="14" viewBox="0 0 24 24">
-                        <rect x="4" y="2" width="16" height="20" fill="#FFF" stroke="#1E88E5" stroke-width="1.5"/>
-                        <text x="8" y="16" fill="#1E88E5" font-family="Times New Roman, serif" font-weight="bold" font-style="italic" font-size="13">e</text>
-                    </svg>
-                    <input type="text" id="addressInput" class="address-input" value="http://www.starsoft.ph/ie6modern" aria-label="Address Bar">
+                    <input type="text" id="addressInput" class="address-input" value="https://www.google.com/" aria-label="Address Bar">
                 </div>
-                <button type="submit" class="ie6-go-btn">
-                    <span class="go-arrow">→</span>
-                    <span>Go</span>
+                <button type="submit" class="ie6-flat-btn">
+                    <span>▶</span><span>Go</span>
                 </button>
             </form>
 
-            <!-- Links Quick Launch Bar -->
-            <div class="ie6-linksbar">
-                <div class="toolbar-handle"></div>
-                <span class="links-label">Links</span>
-                <button class="quick-link-btn" onclick="navigateTo('http://www.starsoft.ph/ie6modern')">🏠 IE6 Modern Home</button>
-                <button class="quick-link-btn" onclick="navigateTo('https://www.youtube.com')">📺 YouTube</button>
-                <button class="quick-link-btn" onclick="navigateTo('https://discord.com')">💬 Discord</button>
-                <button class="quick-link-btn" onclick="navigateTo('https://github.com')">💻 GitHub</button>
-                <a class="quick-link-btn" href="http://hello-azalia.github.io/startimer" target="_blank">⏱ StarTimer ↗</a>
-                <a class="quick-link-btn" href="http://hello-azalia.github.io/boxstrap" target="_blank">📦 Boxstrap ↗</a>
+            <!-- Non-Blocking Classic IE6 Gold Download Information Bar -->
+            <div id="ie6InfoBar" class="ie6-infobar">
+                <span>🛡️ <strong>Downloading IE6ModernBrowser-Setup.exe</strong> from Starsoft Tech... Your browser's native download has started!</span>
+                <button class="ie6-flat-btn" style="height:20px; padding:0 6px;" onclick="document.getElementById('ie6InfoBar').classList.remove('visible')">×</button>
             </div>
 
-            <!-- MAIN BROWSER VIEWPORT -->
+            <!-- Browser Viewport -->
             <div id="ie6Viewport" class="ie6-viewport">
-                <!-- Content dynamically rendered by JS (defaults to IE6 Modern Browser Official Home) -->
+                <!-- Rendered by JavaScript -->
             </div>
 
             <!-- Classic Bottom Status Bar -->
             <div class="ie6-statusbar">
-                <div class="status-left">
-                    <svg width="14" height="14" viewBox="0 0 24 24">
-                        <rect x="4" y="2" width="16" height="20" fill="#FFF" stroke="#666" stroke-width="1.5"/>
-                        <text x="8" y="16" fill="#0054E3" font-family="Times New Roman, serif" font-weight="bold" font-style="italic" font-size="13">e</text>
+                <span id="statusText">Done</span>
+                <div class="status-zone-box">
+                    <svg width="13" height="13" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" fill="#3B82F6" stroke="#1E3A8A" stroke-width="1.5"/>
+                        <path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20" fill="none" stroke="#93C5FD" stroke-width="1.5"/>
                     </svg>
-                    <span id="statusText">Done</span>
-                </div>
-                <div id="statusProgressWrap" class="status-progress-wrap">
-                    <div id="statusProgressFill" class="status-progress-fill"></div>
-                </div>
-                <div class="status-right">
-                    <span>🌐 Internet | Modern Engine (TLS 1.3 Ready)</span>
+                    <span>Internet</span>
                 </div>
             </div>
-
         </div>
     </div>
 
     <!-- ==========================================================================
-         CLASSIC WINDOWS XP / IE6 "FILE DOWNLOAD - SECURITY WARNING" MODAL
+         STARSOFT TECH OFFICIAL RELEASE & DIRECT DOWNLOAD SECTION
          ========================================================================== -->
-    <div id="downloadModal" class="xp-modal-backdrop">
-        <div class="xp-dialog">
-            <div class="ie6-titlebar">
-                <div class="ie6-title-left">
-                    <span>File Download - Security Warning</span>
-                </div>
-                <div class="ie6-win-controls">
-                    <button class="win-ctrl-btn win-ctrl-close" onclick="closeDownloadDialog()">×</button>
+    <section class="starsoft-showcase">
+        <div class="showcase-titlebar">
+            <span>IE6 Modern Browser — Official Release by Starsoft Tech PH</span>
+            <span>File: IE6ModernBrowser-Setup.exe</span>
+        </div>
+
+        <div class="showcase-hero">
+            <div class="showcase-hero-text">
+                <div class="showcase-badge">STARSOFT TECH • WINDOWS RELEASE</div>
+                <h1 class="showcase-title">IE6 Modern Browser</h1>
+                <p class="showcase-desc">
+                    Step back into 2004 without leaving the modern web behind. <strong>IE6 Modern Browser</strong> recreates the unmistakable look, feel, and lightweight responsiveness of Internet Explorer 6 while running a modern web engine capable of loading Google, YouTube, Discord, and modern TLS 1.3 websites effortlessly.
+                </p>
+                <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                    <a class="ie6-flat-btn" href="./IE6ModernBrowser-Setup.exe" download="IE6ModernBrowser-Setup.exe" onclick="onDirectDownloadStart()" style="font-weight:bold; height:28px; padding:0 14px;">
+                        ⬇ Download IE6ModernBrowser-Setup.exe
+                    </a>
+                    <button class="ie6-flat-btn" style="height:28px; padding:0 12px;" onclick="navigateTo('https://www.youtube.com/')">
+                        ▶ Preview YouTube in IE6
+                    </button>
+                    <button class="ie6-flat-btn" style="height:28px; padding:0 12px;" id="soundToggleBtn">
+                        🔊 XP Click Sound: ON
+                    </button>
                 </div>
             </div>
 
-            <!-- Step 1: Classic Prompt -->
-            <div id="dlPromptStep" class="xp-dialog-body">
-                <div class="xp-dialog-row">
-                    <!-- Classic IE6 Setup Icon -->
-                    <svg width="36" height="36" viewBox="0 0 36 36" style="flex-shrink:0;">
-                        <circle cx="18" cy="18" r="14" fill="#1E88E5" stroke="#0D47A1" stroke-width="1.5"/>
-                        <ellipse cx="18" cy="18" rx="16" ry="6" fill="none" stroke="#FFCA28" stroke-width="2.5" transform="rotate(-25 18 18)"/>
-                        <text x="11" y="24" fill="#FFFFFF" font-family="Times New Roman, serif" font-weight="bold" font-style="italic" font-size="22">e</text>
+            <!-- Direct Download Box -->
+            <div class="direct-dl-card">
+                <div style="display:flex; align-items:center; gap:10px; border-bottom:1px solid #ACA899; padding-bottom:10px; margin-bottom:12px;">
+                    <svg width="32" height="32" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="9" fill="#1E88E5"/>
+                        <ellipse cx="12" cy="12" rx="11" ry="4" fill="none" stroke="#F59E0B" stroke-width="2" transform="rotate(-25 12 12)"/>
+                        <text x="7.5" y="16.5" fill="#FFFFFF" font-family="Arial Black, sans-serif" font-weight="900" font-size="14">e</text>
                     </svg>
                     <div>
-                        <p style="margin-bottom:8px;">Do you want to run or save this file?</p>
-                        <table style="font-size:11px; border-collapse:collapse;">
-                            <tr><td style="color:#555; padding-right:8px;">Name:</td><td><strong>IE6ModernBrowser-Setup.exe</strong></td></tr>
-                            <tr><td style="color:#555; padding-right:8px;">Type:</td><td>Application (Windows Installer)</td></tr>
-                            <tr><td style="color:#555; padding-right:8px;">From:</td><td>Starsoft Tech PH (starsoft.ph)</td></tr>
-                        </table>
+                        <div style="font-weight:bold; font-size:12px;">IE6ModernBrowser-Setup.exe</div>
+                        <div style="font-size:10px; color:#555555;">Direct Repository Installer • Windows</div>
                     </div>
                 </div>
 
-                <div class="xp-dialog-actions">
-                    <button class="xp-btn xp-btn-primary" onclick="startSimulatedDownload()">Run</button>
-                    <button class="xp-btn" onclick="startSimulatedDownload()">Save</button>
-                    <button class="xp-btn" onclick="closeDownloadDialog()">Cancel</button>
-                </div>
+                <a class="direct-dl-btn" href="./IE6ModernBrowser-Setup.exe" download="IE6ModernBrowser-Setup.exe" onclick="onDirectDownloadStart()">
+                    <span>⬇ Download Installer (.exe)</span>
+                </a>
 
-                <div style="margin-top:12px; padding-top:8px; border-top:1px solid #ACA899; font-size:10px; color:#444; display:flex; gap:6px; align-items:flex-start;">
-                    <span>🛡️</span>
-                    <span>Verified Freeware by Starsoft Tech. Zero adware, zero bloatware—pure 2004 nostalgia with a modern rendering core.</span>
-                </div>
-            </div>
-
-            <!-- Step 2: Classic Flying File Progress Simulation -->
-            <div id="dlProgressStep" class="xp-dialog-body" style="display:none;">
-                <p style="margin-bottom:8px;">Downloading <strong>IE6ModernBrowser-Setup.exe</strong> from Starsoft Tech...</p>
-                
-                <div class="flying-file-stage">
-                    <span style="font-size:20px;">🌐</span>
-                    <span class="flying-doc">📄</span>
-                    <span style="font-size:20px;">📁</span>
-                </div>
-
-                <div style="width:100%; height:16px; background:#FFF; border:1px solid #716F64; padding:2px; margin-bottom:8px;">
-                    <div id="modalProgressBar" style="height:100%; width:0%; background:repeating-linear-gradient(90deg, #3BA821 0px, #3BA821 8px, #FFF 8px, #FFF 10px);"></div>
-                </div>
-
-                <div id="dlStatusMsg" style="font-size:11px; color:#222; margin-bottom:10px;">Connecting to starsoft.ph mirror...</div>
-
-                <div class="xp-dialog-actions">
-                    <button id="dlCloseBtn" class="xp-btn" onclick="closeDownloadDialog()">Cancel</button>
+                <div style="font-size:10px; color:#444444; text-align:center; line-height:1.45;">
+                    Direct download from same repository folder.<br>
+                    Compatible with Windows 7 / 8 / 10 / 11 • Freeware by <strong>Starsoft Tech</strong>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- ==========================================================================
-         CLASSIC XP INFO / ALERT DIALOG MODAL
-         ========================================================================== -->
-    <div id="infoModal" class="xp-modal-backdrop">
-        <div class="xp-dialog" style="max-width:380px;">
-            <div class="ie6-titlebar">
-                <div class="ie6-title-left">
-                    <span id="infoModalTitle">Microsoft Internet Explorer</span>
-                </div>
-                <div class="ie6-win-controls">
-                    <button class="win-ctrl-btn win-ctrl-close" onclick="closeInfoModal()">×</button>
-                </div>
+        <div class="showcase-grid">
+            <div class="retro-panel">
+                <h3>🌐 2004 IE6 Chrome, 2026 Web Core</h3>
+                <p>Enjoy classic File/Edit/View menus, the iconic black-and-blue 'e' throbber, and crisp beveled toolbars while accessing modern HTTPS and HTML5 websites without broken layouts.</p>
             </div>
-            <div class="xp-dialog-body">
-                <div class="xp-dialog-row">
-                    <span style="font-size:26px;">ℹ️</span>
-                    <div id="infoModalBody" style="white-space:pre-line;"></div>
-                </div>
-                <div class="xp-dialog-actions">
-                    <button class="xp-btn xp-btn-primary" onclick="closeInfoModal()">OK</button>
-                </div>
+            <div class="retro-panel">
+                <h3>⚡ Fast &amp; Lightweight Footprint</h3>
+                <p>Designed without heavy bloatware, telemetry, or cluttered sidebars—making it snappy on both modern desktops and low-spec PCs.</p>
+            </div>
+            <div class="retro-panel">
+                <h3>🔍 Interactive Viewport Above</h3>
+                <p>Type any URL into the Address bar above (or click Google Search, YouTube, or Discord) to test the classic IE6 navigation feel right in your browser.</p>
             </div>
         </div>
-    </div>
+
+        <div class="showcase-footer">
+            <div>
+                <strong>Starsoft Tech PH</strong> — Creators of
+                <a href="http://starsoftph.github.io/startimer" target="_blank">StarTimer</a>,
+                <a href="http://starsoftph.github.io/boxstrap" target="_blank">Boxstrap</a>, and
+                <a href="./IE6ModernBrowser-Setup.exe" download="IE6ModernBrowser-Setup.exe" onclick="onDirectDownloadStart()">IE6 Modern Browser</a>.
+            </div>
+            <div>
+                <a href="https://www.facebook.com/starsoft.ph" target="_blank">Follow Starsoft on Facebook</a>
+            </div>
+        </div>
+    </section>
 
     <script>
         /* ==========================================================================
-           WEB AUDIO API: AUTHENTIC 2004 IE6 NAVIGATION CLICK SOUND SYNTHESIZER
+           WEB AUDIO API: CLASSIC IE6 CLICK SOUND SYNTHESIZER
            ========================================================================== */
         let soundEnabled = true;
         let audioCtx = null;
@@ -1205,7 +927,6 @@
                 if (audioCtx.state === 'suspended') {
                     audioCtx.resume();
                 }
-                // Crisp short mechanical/digital IE6 navigation "tick"
                 const osc = audioCtx.createOscillator();
                 const gain = audioCtx.createGain();
                 osc.type = 'triangle';
@@ -1220,240 +941,122 @@
                 osc.start();
                 osc.stop(audioCtx.currentTime + 0.032);
             } catch (e) {
-                // Ignore audio context autoplay blocks gracefully
+                // Gracefully ignore audio autoplay restrictions
             }
         }
 
         function toggleSound() {
             soundEnabled = !soundEnabled;
             const btn = document.getElementById('soundToggleBtn');
-            btn.textContent = soundEnabled ? '🔊 XP Click Sounds: ON' : '🔇 XP Click Sounds: OFF';
+            btn.textContent = soundEnabled ? '🔊 XP Click Sound: ON' : '🔇 XP Click Sound: OFF';
             if (soundEnabled) playXPClick();
         }
 
         document.getElementById('soundToggleBtn').addEventListener('click', toggleSound);
 
         /* ==========================================================================
-           PAGE TEMPLATES FOR THE SIMULATED IE6 MODERN BROWSER VIEWPORT
+           NON-BLOCKING IE6 GOLD DOWNLOAD NOTIFICATION BAR
            ========================================================================== */
-        const HOME_URL = 'http://www.starsoft.ph/ie6modern';
+        function onDirectDownloadStart() {
+            playXPClick();
+            const infoBar = document.getElementById('ie6InfoBar');
+            const statusText = document.getElementById('statusText');
+            infoBar.classList.add('visible');
+            statusText.textContent = 'Downloading IE6ModernBrowser-Setup.exe...';
+            setTimeout(() => {
+                statusText.textContent = 'Done';
+            }, 2500);
+        }
 
-        function getHomePageHTML() {
+        /* ==========================================================================
+           VIEWPORT TEMPLATES (DARK-MODE GOOGLE HOMEPAGE + MODERN SITE PREVIEWS)
+           ========================================================================== */
+        const HOME_URL = 'https://www.google.com/';
+
+        function getGoogleHomeHTML() {
             return `
-                <!-- Hero Banner -->
-                <div class="web-hero-banner">
-                    <div class="web-hero-left">
-                        <div class="version-pill">NEW RELEASE • BUILD 6.0.2026</div>
-                        <div class="web-hero-title">IE6 Modern Browser</div>
-                        <div class="web-hero-sub">
-                            <strong>Browse the Modern Web Like It's 2004!</strong><br>
-                            Experience the iconic Windows XP Luna Blue &amp; Internet Explorer 6 interface powered by a lightning-fast modern rendering engine. Watch YouTube, chat on Discord, and load modern HTML5 websites with zero layout breakage and ultra-low RAM usage.
+                <div class="google-dark-canvas">
+                    <div class="google-top-nav">
+                        <a onclick="navigateTo('https://mail.google.com/')">Gmail</a>
+                        <a onclick="navigateTo('https://www.google.com/imghp')">Images</a>
+                        <span title="Google apps" style="font-size:16px; cursor:pointer; color:#BDC1C6;">⠿</span>
+                        <a class="google-signin-pill" href="./IE6ModernBrowser-Setup.exe" download="IE6ModernBrowser-Setup.exe" onclick="onDirectDownloadStart()">Sign in</a>
+                    </div>
+
+                    <div class="google-center-box">
+                        <div class="google-wordmark">Google</div>
+
+                        <form class="google-search-pill" onsubmit="handleGoogleSearch(event)">
+                            <span style="color:#9AA0A6; font-size:20px; font-weight:300;">+</span>
+                            <input type="text" id="googleSearchInput" class="google-search-input" placeholder="" aria-label="Search">
+                            <span title="Search by voice" style="color:#8AB4F8; font-size:14px;">🎤</span>
+                            <span title="Search by image" style="color:#8AB4F8; font-size:14px;">📷</span>
+                            <span class="google-aimode-chip" onclick="navigateTo('https://www.google.com/search?q=IE6+Modern+Browser')">✨ AI Mode</span>
+                        </form>
+
+                        <div class="google-buttons-row">
+                            <button type="button" class="google-action-btn" onclick="handleGoogleSearch()">Google Search</button>
+                            <a class="google-action-btn" style="text-decoration:none;" href="./IE6ModernBrowser-Setup.exe" download="IE6ModernBrowser-Setup.exe" onclick="onDirectDownloadStart()">I'm Feeling Lucky</a>
                         </div>
-                        <div style="display:flex; flex-wrap:wrap; gap:8px;">
-                            <button class="xp-btn xp-btn-primary" onclick="triggerDownloadDialog()">
-                                💿 Download IE6ModernBrowser-Setup.exe
-                            </button>
-                            <button class="xp-btn" onclick="navigateTo('https://www.youtube.com')">
-                                ▶ Test Modern Sites in IE6
-                            </button>
+
+                        <div class="google-lang-row">
+                            Google offered in:
+                            <a href="#filipino" onclick="navigateTo('https://www.google.com/?hl=tl'); return false;">Filipino</a>
+                            <a href="#cebuano" onclick="navigateTo('https://www.google.com/?hl=ceb'); return false;">Cebuano</a>
                         </div>
                     </div>
 
-                    <!-- Prominent Download Card -->
-                    <div class="download-box-card">
-                        <div class="download-box-header">
-                            <svg width="32" height="32" viewBox="0 0 36 36">
-                                <circle cx="18" cy="18" r="14" fill="#1E88E5" stroke="#0D47A1" stroke-width="1.5"/>
-                                <ellipse cx="18" cy="18" rx="16" ry="6" fill="none" stroke="#FFCA28" stroke-width="2.5" transform="rotate(-25 18 18)"/>
-                                <text x="11" y="24" fill="#FFFFFF" font-family="Times New Roman, serif" font-weight="bold" font-style="italic" font-size="22">e</text>
-                            </svg>
-                            <div>
-                                <div style="font-weight:bold; font-size:12px; color:#002B73;">IE6ModernBrowser-Setup.exe</div>
-                                <div style="font-size:10px; color:#444;">Official Windows Installer • Freeware</div>
+                    <div class="google-footer-wrap">
+                        <div class="google-footer-country">Philippines</div>
+                        <div class="google-footer-links">
+                            <div class="google-footer-group">
+                                <a onclick="navigateTo('https://about.google/')">About</a>
+                                <a onclick="navigateTo('https://ads.google.com/')">Advertising</a>
+                                <a onclick="navigateTo('https://www.google.com/services/')">Business</a>
+                                <a onclick="navigateTo('https://www.google.com/search/howsearchworks/')">How Search works</a>
+                            </div>
+                            <div class="google-footer-group">
+                                <a onclick="navigateTo('https://policies.google.com/privacy')">Privacy</a>
+                                <a onclick="navigateTo('https://policies.google.com/terms')">Terms</a>
+                                <a href="./IE6ModernBrowser-Setup.exe" download="IE6ModernBrowser-Setup.exe" onclick="onDirectDownloadStart()">Download IE6ModernBrowser-Setup.exe</a>
                             </div>
                         </div>
-                        <button class="download-cta-btn" onclick="triggerDownloadDialog()">
-                            <span>⬇ Download Now (Free)</span>
-                        </button>
-                        <div class="download-meta">
-                            For Windows 7 / 8 / 10 / 11 (x64 &amp; x86)<br>
-                            Built by <strong>Starsoft Tech PH</strong> • Zero Adware
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Main Page Content -->
-                <div class="web-content-body">
-                    
-                    <!-- Interactive Test Drive Bar -->
-                    <div class="sim-sites-box">
-                        <div style="font-weight:bold; color:#003399; font-size:12px;">
-                            🧪 Interactive Nostalgia Preview — Click any modern site below to test how IE6 Modern renders 2026 web apps:
-                        </div>
-                        <div class="sim-site-chips">
-                            <button class="xp-btn" onclick="navigateTo('https://www.youtube.com')">▶ YouTube.com</button>
-                            <button class="xp-btn" onclick="navigateTo('https://discord.com')">💬 Discord.com</button>
-                            <button class="xp-btn" onclick="navigateTo('https://github.com')">🐙 GitHub.com</button>
-                            <button class="xp-btn" onclick="navigateTo('https://www.google.com')">🔍 Google Search</button>
-                        </div>
-                    </div>
-
-                    <!-- Key Features Grid -->
-                    <div class="section-heading-xp">Why Choose IE6 Modern Browser?</div>
-                    <div class="features-grid">
-                        <div class="feature-card-2004">
-                            <div class="feature-card-header">
-                                <span>🚀</span>
-                                <span>Modern Web Engine Inside</span>
-                            </div>
-                            <div class="feature-card-body">
-                                Unlike the original 2001 Trident engine, IE6 Modern runs a full HTML5, CSS3, ES2026, and TLS 1.3 engine under the hood—so modern sites work without certificate errors or broken CSS.
-                            </div>
-                        </div>
-
-                        <div class="feature-card-2004">
-                            <div class="feature-card-header">
-                                <span>🎨</span>
-                                <span>Authentic 2004 XP Luna UI</span>
-                            </div>
-                            <div class="feature-card-body">
-                                Pixel-accurate beveled toolbars, classic File/Edit/View menus, animated spinning blue 'e' throbber, status bar progress meter, and nostalgic Windows XP navigation click sounds.
-                            </div>
-                        </div>
-
-                        <div class="feature-card-2004">
-                            <div class="feature-card-header">
-                                <span>⚡</span>
-                                <span>Ultra-Light &amp; Zero Bloat</span>
-                            </div>
-                            <div class="feature-card-body">
-                                Stripped of heavy AI sidebars, crypto wallets, background telemetry, and bloated sync services. Ideal for low-spec PCs, Pisonet rigs, and internet cafés.
-                            </div>
-                        </div>
-
-                        <div class="feature-card-2004">
-                            <div class="feature-card-header">
-                                <span>⭐</span>
-                                <span>Classic Favorites &amp; Control</span>
-                            </div>
-                            <div class="feature-card-body">
-                                Manage local Favorites folders, set custom start pages, and enjoy instant cold-start launch times with zero forced account sign-ins.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- System Requirements & Comparison -->
-                    <div class="two-col-section">
-                        <div>
-                            <div class="section-heading-xp">System Requirements</div>
-                            <table class="xp-table">
-                                <tr><th>Specification</th><th>Requirement</th></tr>
-                                <tr><td><strong>Operating System</strong></td><td>Windows 7, Windows 8.1, Windows 10, or Windows 11</td></tr>
-                                <tr><td><strong>Processor</strong></td><td>1.0 GHz or faster (x86 / x64)</td></tr>
-                                <tr><td><strong>Memory (RAM)</strong></td><td>Minimal footprint (Runs smoothly even on 2 GB RAM)</td></tr>
-                                <tr><td><strong>Installer File</strong></td><td>IE6ModernBrowser-Setup.exe</td></tr>
-                                <tr><td><strong>License</strong></td><td>100% Freeware by Starsoft Tech PH</td></tr>
-                            </table>
-                        </div>
-
-                        <div>
-                            <div class="section-heading-xp">2004 Classic IE6 vs. IE6 Modern</div>
-                            <table class="xp-table">
-                                <tr><th>Feature</th><th>Original IE6 (2001)</th><th>IE6 Modern (2026)</th></tr>
-                                <tr><td><strong>Luna Blue Toolbar &amp; 'e'</strong></td><td>✅ Yes</td><td>✅ Yes (Pixel-Faithful)</td></tr>
-                                <tr><td><strong>TLS 1.3 &amp; Modern HTTPS</strong></td><td>❌ Fails to connect</td><td>✅ Full Support</td></tr>
-                                <tr><td><strong>YouTube / Discord / HTML5</strong></td><td>❌ Unsupported</td><td>✅ Smooth Playback</td></tr>
-                                <tr><td><strong>RAM Overhead</strong></td><td>Low</td><td>✅ Ultra-Low (No Bloat)</td></tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Footer -->
-                <div class="web-footer">
-                    <div>
-                        <strong>Starsoft Tech PH</strong> — Makers of <a href="http://hello-azalia.github.io/startimer" target="_blank">StarTimer</a>, <a href="http://hello-azalia.github.io/boxstrap" target="_blank">Boxstrap</a>, and <strong>IE6 Modern Browser</strong>.
-                    </div>
-                    <div>
-                        <a href="https://www.facebook.com/starsoft.ph" target="_blank">Follow Starsoft on Facebook</a> |
-                        <a href="#top" onclick="triggerDownloadDialog(); return false;">Download Setup.exe</a>
                     </div>
                 </div>
             `;
         }
 
-        function getSimulatedSiteHTML(url) {
-            const lower = url.toLowerCase();
-            let siteTitle = url;
-            let badge = 'TLS 1.3 SECURE • MODERN ENGINE ACTIVE';
-            let cardContent = '';
-
-            if (lower.includes('youtube')) {
-                siteTitle = 'YouTube — Broadcast Yourself (Rendered in IE6 Modern)';
-                cardContent = `
-                    <div style="background:#111; color:#FFF; padding:18px; border:2px solid #333; margin-bottom:14px;">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-                            <span style="background:#FF0000; color:#FFF; font-weight:bold; padding:3px 8px; border-radius:3px;">▶ YouTube</span>
-                            <span style="font-size:11px; color:#AAA;">HTML5 VP9/AV1 Hardware Acceleration: Active</span>
-                        </div>
-                        <div style="background:#000; border:1px solid #444; height:190px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:12px;">
-                            <div style="font-size:32px; margin-bottom:6px;">🎬</div>
-                            <div style="font-weight:bold; font-size:14px; color:#FFF;">Windows XP Tour Music (High Definition 1080p60)</div>
-                            <div style="font-size:11px; color:#9CA3AF; margin-top:4px;">Playing smoothly inside IE6 Modern Browser with zero plugin errors!</div>
-                        </div>
-                    </div>
-                `;
-            } else if (lower.includes('discord')) {
-                siteTitle = 'Discord — Web App (Rendered in IE6 Modern)';
-                cardContent = `
-                    <div style="background:#313338; color:#F2F3F5; padding:16px; border:2px solid #1E1F22; margin-bottom:14px;">
-                        <div style="font-weight:bold; color:#5865F2; font-size:14px; margin-bottom:8px;">💬 #starsoft-community — Discord Web</div>
-                        <div style="background:#2B2D31; padding:10px; border-radius:4px; font-size:11px; line-height:1.6;">
-                            <div><strong style="color:#38BDF8;">Pat Versola [CEO]:</strong> Welcome to IE6 Modern Browser! WebSockets &amp; modern CSS grid work out of the box.</div>
-                            <div><strong style="color:#FBBF24;">Dette Molina:</strong> That spinning blue 'e' in the top right brings back pure 2004 memories!</div>
-                            <div><strong style="color:#F472B6;">Jhonsen Ationg:</strong> Crisp Luna Blue borders with zero modern browser bloat.</div>
-                        </div>
-                    </div>
-                `;
-            } else if (lower.includes('github')) {
-                siteTitle = 'GitHub — Starsoft Tech Repositories';
-                cardContent = `
-                    <div style="background:#0D1117; color:#C9D1D9; padding:16px; border:2px solid #30363D; margin-bottom:14px;">
-                        <div style="font-weight:bold; color:#58A6FF; font-size:14px; margin-bottom:8px;">🐙 github.com/starsoft-ph/ie6-modern-browser</div>
-                        <p style="font-size:11px; margin-bottom:10px;">Modern Chromium/WebView2 runtime wrapped in a lightweight native Windows XP Internet Explorer 6 shell.</p>
-                        <button class="xp-btn xp-btn-primary" onclick="triggerDownloadDialog()">⬇ Download IE6ModernBrowser-Setup.exe</button>
-                    </div>
-                `;
-            } else {
-                siteTitle = `Browsing: ${url}`;
-                cardContent = `
-                    <div style="background:#F8FAFC; border:1px solid #CBD5E1; padding:18px; margin-bottom:14px;">
-                        <div style="font-weight:bold; color:#003399; font-size:14px; margin-bottom:6px;">🌐 Modern Web Page Loaded Successfully</div>
-                        <p style="font-size:12px; color:#334155; line-height:1.5;">
-                            <strong>${url}</strong> rendered cleanly using IE6 Modern Browser's HTML5/CSS3 engine while keeping the classic 2004 Windows XP interface.
-                        </p>
-                    </div>
-                `;
-            }
-
+        function getSimulatedModernPageHTML(url) {
             return `
-                <div class="sim-page-notice">
-                    <span>ℹ️ <strong>IE6 Modern Preview:</strong> Viewing simulated 2026 site inside the IE6 frame.</span>
-                    <button class="xp-btn" onclick="navigateTo('${HOME_URL}')">← Back to IE6 Modern Home</button>
-                </div>
-                <div class="sim-page-canvas">
-                    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
-                        <h2 style="font-size:16px; color:#003399;">${siteTitle}</h2>
-                        <span style="background:#DCFCE7; color:#166534; border:1px solid #86EFAC; font-size:10px; font-weight:bold; padding:2px 6px;">${badge}</span>
+                <div class="sim-modern-page">
+                    <div>
+                        <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:10px; border-bottom:1px solid #333; padding-bottom:12px; margin-bottom:16px;">
+                            <div>
+                                <span style="background:#1E3A8A; color:#93C5FD; font-size:10px; font-weight:bold; padding:3px 7px; border-radius:2px;">TLS 1.3 • MODERN ENGINE</span>
+                                <h2 style="font-size:18px; margin-top:6px; color:#FFFFFF;">${url}</h2>
+                            </div>
+                            <button class="ie6-flat-btn" onclick="navigateTo('${HOME_URL}')">⌂ Back to Google Home</button>
+                        </div>
+
+                        <div style="background:#24262B; border:1px solid #3A3D45; padding:18px; border-radius:4px; margin-bottom:16px;">
+                            <p style="font-size:13px; color:#E5E7EB; line-height:1.6; margin-bottom:14px;">
+                                Modern web content for <strong>${url}</strong> renders smoothly inside <strong>IE6 Modern Browser</strong> with full HTML5, CSS3, and modern HTTPS support—while keeping the unmistakable 2004 Internet Explorer 6 chrome!
+                            </p>
+                            <a class="direct-dl-btn" style="max-width:320px;" href="./IE6ModernBrowser-Setup.exe" download="IE6ModernBrowser-Setup.exe" onclick="onDirectDownloadStart()">
+                                ⬇ Download IE6ModernBrowser-Setup.exe
+                            </a>
+                        </div>
                     </div>
-                    ${cardContent}
-                    <button class="xp-btn xp-btn-primary" onclick="navigateTo('${HOME_URL}')">🏠 Return to IE6 Modern Download Page</button>
+
+                    <div style="font-size:11px; color:#9CA3AF; border-top:1px solid #333; padding-top:10px;">
+                        IE6 Modern Browser by Starsoft Tech PH • Running in Internet Zone
+                    </div>
                 </div>
             `;
         }
 
         /* ==========================================================================
-           BROWSER NAVIGATION, HISTORY & ANIMATION LOGIC
+           NAVIGATION & HISTORY LOGIC
            ========================================================================== */
         const historyStack = [HOME_URL];
         let historyIndex = 0;
@@ -1461,8 +1064,6 @@
         const viewportEl = document.getElementById('ie6Viewport');
         const addressInput = document.getElementById('addressInput');
         const statusText = document.getElementById('statusText');
-        const progressWrap = document.getElementById('statusProgressWrap');
-        const progressFill = document.getElementById('statusProgressFill');
         const throbberIcon = document.getElementById('throbberIcon');
         const windowTitleText = document.getElementById('windowTitleText');
 
@@ -1471,7 +1072,7 @@
 
             let normalized = url.trim();
             if (!normalized) normalized = HOME_URL;
-            if (!normalized.startsWith('http://') && !normalized.startsWith('https://') && !normalized.startsWith('about:')) {
+            if (!normalized.startsWith('http://') && !normalized.startsWith('https://')) {
                 normalized = 'https://' + normalized;
             }
 
@@ -1484,26 +1085,19 @@
             addressInput.value = normalized;
             statusText.textContent = `Opening page ${normalized}...`;
             throbberIcon.classList.add('spinning');
-            progressWrap.classList.add('active');
-            progressFill.style.width = '25%';
 
-            setTimeout(() => { progressFill.style.width = '68%'; }, 140);
             setTimeout(() => {
-                progressFill.style.width = '100%';
-                const isHome = normalized === HOME_URL || normalized === 'about:home';
-                viewportEl.innerHTML = isHome ? getHomePageHTML() : getSimulatedSiteHTML(normalized);
-                viewportEl.scrollTop = 0;
-                windowTitleText.textContent = isHome
-                    ? 'IE6 Modern Browser - Microsoft Internet Explorer provided by Starsoft Tech'
-                    : `${normalized} - IE6 Modern Browser`;
-            }, 280);
+                const isGoogleHome = normalized === HOME_URL || normalized === 'https://www.google.com' || normalized.startsWith('https://www.google.com/?');
+                viewportEl.innerHTML = isGoogleHome ? getGoogleHomeHTML() : getSimulatedModernPageHTML(normalized);
+                windowTitleText.textContent = isGoogleHome
+                    ? 'Google - Microsoft Internet Explorer'
+                    : `${normalized} - Microsoft Internet Explorer`;
+            }, 220);
 
             setTimeout(() => {
                 throbberIcon.classList.remove('spinning');
-                progressWrap.classList.remove('active');
-                progressFill.style.width = '0%';
                 statusText.textContent = 'Done';
-            }, 460);
+            }, 420);
         }
 
         function navigateTo(url) {
@@ -1514,6 +1108,13 @@
         function refreshCurrentPage() {
             closeAllMenus();
             renderPage(historyStack[historyIndex], false);
+        }
+
+        function handleGoogleSearch(e) {
+            if (e) e.preventDefault();
+            const input = document.getElementById('googleSearchInput');
+            const q = input && input.value.trim() ? encodeURIComponent(input.value.trim()) : 'IE6+Modern+Browser';
+            navigateTo(`https://www.google.com/search?q=${q}`);
         }
 
         document.getElementById('addressForm').addEventListener('submit', (e) => {
@@ -1542,7 +1143,6 @@
         document.getElementById('btnStop').addEventListener('click', () => {
             playXPClick();
             throbberIcon.classList.remove('spinning');
-            progressWrap.classList.remove('active');
             statusText.textContent = 'Stopped';
         });
 
@@ -1589,83 +1189,18 @@
 
         document.getElementById('btnClose').addEventListener('click', () => {
             playXPClick();
-            showInfoModal('IE6 Modern Browser', 'Tip: You can minimize or maximize this window using the top-right XP buttons, or click Download Setup.exe to get the Windows installer!');
+            ie6Window.classList.toggle('minimized');
         });
 
         function copyCurrentUrl() {
             closeAllMenus();
             addressInput.select();
             document.execCommand('copy');
-            showInfoModal('Clipboard', `Copied URL to clipboard:\n${addressInput.value}`);
+            statusText.textContent = `Copied ${addressInput.value} to clipboard`;
         }
 
-        /* ==========================================================================
-           CLASSIC IE6 FILE DOWNLOAD SECURITY WARNING & PROGRESS DIALOG
-           ========================================================================== */
-        const downloadModal = document.getElementById('downloadModal');
-        const dlPromptStep = document.getElementById('dlPromptStep');
-        const dlProgressStep = document.getElementById('dlProgressStep');
-        const modalProgressBar = document.getElementById('modalProgressBar');
-        const dlStatusMsg = document.getElementById('dlStatusMsg');
-        const dlCloseBtn = document.getElementById('dlCloseBtn');
-        let dlTimer = null;
-
-        function triggerDownloadDialog() {
-            closeAllMenus();
-            playXPClick();
-            clearInterval(dlTimer);
-            dlPromptStep.style.display = 'block';
-            dlProgressStep.style.display = 'none';
-            modalProgressBar.style.width = '0%';
-            dlCloseBtn.textContent = 'Cancel';
-            downloadModal.classList.add('open');
-        }
-
-        function closeDownloadDialog() {
-            playXPClick();
-            clearInterval(dlTimer);
-            downloadModal.classList.remove('open');
-        }
-
-        function startSimulatedDownload() {
-            playXPClick();
-            dlPromptStep.style.display = 'none';
-            dlProgressStep.style.display = 'block';
-            let pct = 0;
-
-            dlTimer = setInterval(() => {
-                pct += 14;
-                if (pct >= 100) {
-                    pct = 100;
-                    modalProgressBar.style.width = '100%';
-                    dlStatusMsg.innerHTML = '✅ <strong>Download Complete!</strong> IE6ModernBrowser-Setup.exe is ready to install.';
-                    dlCloseBtn.textContent = 'Close';
-                    clearInterval(dlTimer);
-                } else {
-                    modalProgressBar.style.width = pct + '%';
-                    dlStatusMsg.textContent = `Downloading IE6ModernBrowser-Setup.exe... (${pct}% at 4.8 MB/sec)`;
-                }
-            }, 220);
-        }
-
-        /* ==========================================================================
-           INFO DIALOG HELPERS
-           ========================================================================== */
-        const infoModal = document.getElementById('infoModal');
-        function showInfoModal(title, message) {
-            closeAllMenus();
-            document.getElementById('infoModalTitle').textContent = title;
-            document.getElementById('infoModalBody').textContent = message;
-            infoModal.classList.add('open');
-        }
-
-        function closeInfoModal() {
-            playXPClick();
-            infoModal.classList.remove('open');
-        }
-
-        // Initial render on load
-        viewportEl.innerHTML = getHomePageHTML();
+        // Initial render
+        viewportEl.innerHTML = getGoogleHomeHTML();
     </script>
 </body>
 </html>
